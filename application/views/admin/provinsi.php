@@ -68,8 +68,8 @@
 				var kode = listData[i]['kode_provinsi'];
 				var nama = listData[i]['nama'];
 				var aksi = `
-					<button class="btn btn-warning" type="button">Edit</button>
-					<button class="btn btn-danger" type="button">Hapus</button>
+					<button class="btn btn-warning btn-sm" type="button">Edit</button>
+					<button class="btn btn-danger  btn-sm" type="button">Hapus</button>
 				`;
 
 				rows.push([
