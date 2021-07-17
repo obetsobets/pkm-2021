@@ -4,9 +4,8 @@
     <h5 class="card-title">Gallery</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
-    <button type="button" class="btn btn-primary" id="liveToastBtn" data-bs-toggle="alert" data-bs-target="#liveToast">Show live toast</button>
-
-
+    
+    <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
   </div>
 
 </div>
@@ -24,4 +23,12 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#liveToastBtn").click(function(){
+      $("#liveToast").toast('show');
+    })
+  })
+</script>
 
