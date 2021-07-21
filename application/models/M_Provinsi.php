@@ -31,6 +31,21 @@ class M_Provinsi extends CI_model{
 		$res = $this->db->update('provinsi', $data);
 		return $res;
 	}
+
+	public function hapus($id){
+		$data = $this->getDataById($id);
+
+		$this->db->where('id_provinsi', $id);
+		$res = $this->db->delete('provinsi');
+
+		if($res){
+			return $data;
+		}
+		else{
+			return false;
+		}
+
+	}
 }
 
 ?>

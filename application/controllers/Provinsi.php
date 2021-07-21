@@ -44,6 +44,17 @@ class Provinsi extends CI_Controller {
 		echo json_encode($retval);
 	}
 
+	public function getDataById(){
+		$retval = array();
+		@$id_provinsi = $this->input->post('id_provinsi');
+		$data = $this->M_Provinsi->getDataById($id_provinsi);
+
+		$retval['id_provinsi'] = $id_provinsi;
+		$retval['data'] = $data;
+
+		echo json_encode($retval);
+	}
+
 	public function getListData(){
 		$retval = array();		
 
@@ -78,5 +89,15 @@ class Provinsi extends CI_Controller {
 		echo json_encode($retval);
 	}
 
+	public function hapus(){
+		$retval = array();
+		@$id_provinsi = $this->input->post('id_provinsi');
+		$data = $this->M_Provinsi->hapus($id_provinsi);
+
+		$retval['id_provinsi'] = $id_provinsi;
+		$retval['data'] = $data;
+
+		echo json_encode($retval);
+	}
 	
 }
