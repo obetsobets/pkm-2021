@@ -13,7 +13,7 @@
 		<div class="row">
 		    <div class="list-group col-2">
 		    <ul>
-		    	<li class="list-menu list-group-item list-group-item-action active" style="cursor: pointer;" menu="home_admin" param="10">Home</li>
+		    	<li class="list-menu list-group-item list-group-item-action active" style="cursor: pointer;" menu="beranda" param="10">Home</li>
 		    	<li class="list-menu list-group-item list-group-item-action" style="cursor: pointer;"  menu="provinsi"  param="15">Provinsi</li>
 		    	<li class="list-menu list-group-item list-group-item-action" style="cursor: pointer;"  menu="institusi"  param="20">Institusi</li>
 		    </ul>
@@ -37,7 +37,7 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-	viewContent();
+	viewContent("beranda",10);
 
 		$(".list-group").on('click','.list-menu', function(){
 			$(".list-menu").removeClass('active');
@@ -51,10 +51,10 @@ $(document).ready(function(){
 			viewContent(menu, post_data);
 		})
 
-		function viewContent(menu="home_admin", post_data={param: 10}){
+		function viewContent(menu="", post_data={param: 10}){
 			$.ajax({
 				method: "POST",
-				url: "<?= base_url(); ?>Admin/"+menu+"/",
+				url: "<?= base_url(); ?>Admin/"+menu,
 				data: post_data
 			}).done(function(res){
 				//console.log(res);

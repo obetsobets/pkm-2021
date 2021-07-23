@@ -13,10 +13,18 @@ class Admin extends CI_Controller {
 	{
 		$this->load->view($this->vhome);
 	}
+	public function beranda()
+	{
+		$this->load->view('admin/beranda');
+	}
 	public function provinsi()
 	{
 		$this->load->view('admin/provinsi');
 	}
 
+	public function institusi()
+	{
+		$this->load->view('admin/institusi');
+	}
 	
 }
