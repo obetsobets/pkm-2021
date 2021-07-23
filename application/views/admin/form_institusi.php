@@ -1,21 +1,21 @@
 <form class="row g-3" id="formData" method="post">
   <div class="col-auto">
     <label for="kode" class="visually-hidden">Kode</label>
-    <input type="text" class="form-control" id="kode" name="kode" placeholder="Kode">
+    <input type="text" class="form-control" id="kode" name="kode" placeholder="Kode" required>
   </div>
   <div class="col-12">
     <label for="Nama Institusi" class="visually-hidden">Nama Institusi</label>
-    <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Institusi">
+    <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Institusi" required>
   </div>
   <div class="col-12">
-    <label for="NSingkatan" class="visually-hidden">Singkatan</label>
-    <input type="text" class="form-control" id="singkatan" name="singkatan" placeholder="Singkatan">
+    <label for="Singkatan" class="visually-hidden">Singkatan</label>
+    <input type="text" class="form-control" id="singkatan" name="singkatan" placeholder="Singkatan" required>
   </div>
   <div class="col-12">
     <!-- <label for="Nama Provinsi" class="visually-hidden">Provinsi</label>
     <input type="text" class="form-control" id="id_provinsi" name="id_provinsi" placeholder="Nama Provinsi"> -->
 
-    <select class="form-select" aria-label="Default select example" id="id_provinsi" name="id_provinsi">
+    <select class="form-select" aria-label="Default select example" id="id_provinsi" name="id_provinsi" required>
 	  
 	</select> 
   </div>
