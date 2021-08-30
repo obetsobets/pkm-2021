@@ -118,7 +118,7 @@
 				var no = i+1;
 				var id_provinsi = listData[i]['id_provinsi'];
 				var kode = listData[i]['kode_provinsi'];
-				var nama = listData[i]['nama'];
+				var nama = listData[i]['nama_provinsi'];
 
 				
 				
@@ -164,7 +164,7 @@
 			var data = res['data'];
 			//console.log(res);
 
-			var strHtml = `Apakah data Provinsi dengan kode = <strong>${data['kode_provinsi']} dan Nama = ${data['nama']}</strong> akan dihapus?`;
+			var strHtml = `Apakah data Provinsi dengan kode = <strong>${data['kode_provinsi']} dan Nama = ${data['nama_provinsi']}</strong> akan dihapus?`;
 			$("#hapusModal").find(".modal-body").html(strHtml);
 
 			$("#btn-konfirmasi-hapus").attr('id_provinsi',data['id_provinsi']);

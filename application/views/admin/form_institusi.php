@@ -1,15 +1,15 @@
 <form class="row g-3" id="formData" method="post">
   <div class="col-auto">
     <label for="kode" class="visually-hidden">Kode</label>
-    <input type="text" class="form-control" id="kode" name="kode" placeholder="Kode" required>
+    <input type="text" class="form-control" id="kode_institusi" name="kode_institusi" placeholder="Kode" required>
   </div>
   <div class="col-12">
     <label for="Nama Institusi" class="visually-hidden">Nama Institusi</label>
-    <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Institusi" required>
+    <input type="text" class="form-control" id="nama_institusi" name="nama_institusi" placeholder="Nama Institusi" required>
   </div>
   <div class="col-12">
     <label for="Singkatan" class="visually-hidden">Singkatan</label>
-    <input type="text" class="form-control" id="singkatan" name="singkatan" placeholder="Singkatan" required>
+    <input type="text" class="form-control" id="singkatan_institusi" name="singkatan_institusi" placeholder="Singkatan" required>
   </div>
   <div class="col-12">
     <!-- <label for="Nama Provinsi" class="visually-hidden">Provinsi</label>
@@ -43,7 +43,7 @@
 					//console.log(key);
 					//console.log(val);
 					var selected = currentValue == val.id_provinsi ? "selected" : "";
-					strSelectHTML += `<option value="${val.id_provinsi}" ${selected}>${val.nama}</option>`;
+					strSelectHTML += `<option value="${val.id_provinsi}" ${selected}>${val.nama_provinsi}</option>`;
 				})
 				$("#id_provinsi").append(strSelectHTML);
 			})
@@ -59,16 +59,21 @@
 				//console.log(res);
 
 				var data = res['data'];
-				var kode = data['kode'] ? data['kode'] : '';
-				var nama = data['nama'] ? data['nama'] : '';
-				var singkatan = data['singkatan'] ? data['singkatan'] : '';
-				var id_provinsi = data['id_provinsi'] ? data['id_provinsi'] : 0;
+				var kode='', nama='', singkatan='', id_provinsi='';
+				if(data){
+					kode = data['kode_institusi'] ? data['kode_institusi'] : '';
+					nama = data['nama_institusi'] ? data['nama_institusi'] : '';
+					singkatan = data['singkatan_institusi'] ? data['singkatan_institusi'] : '';
+					id_provinsi = data['id_provinsi'] ? data['id_provinsi'] : 0;
+				}
+				
+				
 
 				renderProvinsi(id_provinsi);
 
-				$("#formData input[name='kode']").val(kode);
-				$("#formData input[name='nama']").val(nama);
-				$("#formData input[name='singkatan']").val(singkatan);
+				$("#formData input[name='kode_institusi']").val(kode);
+				$("#formData input[name='nama_institusi']").val(nama);
+				$("#formData input[name='singkatan_institusi']").val(singkatan);
 				$("#formData input[name='id_provinsi']").val(id_provinsi);
 			})
 		}

@@ -15,7 +15,7 @@
 					<th>Kode</th>
 					<th>Nama Institusi</th>
 					<th>Singkatan</th>
-					<th>Institusi</th>
+					<th>Provinsi</th>
 					<th>#Aksi</th>
 				</tr>
 			</thead>
@@ -119,9 +119,9 @@
 			for (var i = 0; i < listData.length; i++) {
 				var no = i+1;
 				var id_institusi = listData[i]['id_institusi'];
-				var kode = listData[i]['kode'];
-				var nama = listData[i]['nama'];
-				var singkatan = listData[i]['singkatan'];
+				var kode = listData[i]['kode_institusi'];
+				var nama = listData[i]['nama_institusi'];
+				var singkatan = listData[i]['singkatan_institusi'];
 				var id_provinsi = listData[i]['id_provinsi'];
 				var provinsi = listData[i]['nama_provinsi'];
 				

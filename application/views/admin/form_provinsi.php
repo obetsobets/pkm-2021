@@ -5,7 +5,7 @@
   </div>
   <div class="col-12">
     <label for="Nama Provinsi" class="visually-hidden">Nama Provinsi</label>
-    <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Provinsi">
+    <input type="text" class="form-control" id="nama_provinsi" name="nama_provinsi" placeholder="Nama Provinsi">
   </div>
   <hr>
   <div class="col-auto">
@@ -27,10 +27,10 @@
 
 				var data = res['data'];
 				var kode_provinsi = data['kode_provinsi'] ? data['kode_provinsi'] : '';
-				var nama = data['nama'] ? data['nama'] : '';
+				var nama_provinsi = data['nama_provinsi'] ? data['nama_provinsi'] : '';
 
 				$("#formData input[name='kode_provinsi']").val(kode_provinsi);
-				$("#formData input[name='nama']").val(nama);
+				$("#formData input[name='nama_provinsi']").val(nama_provinsi);
 			})
 		}
 

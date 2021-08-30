@@ -37,7 +37,7 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-	viewContent("beranda",10);
+	viewContent("beranda");
 
 		$(".list-group").on('click','.list-menu', function(){
 			$(".list-menu").removeClass('active');
@@ -48,14 +48,14 @@ $(document).ready(function(){
 			var post_data = {param};
 
 			//console.log(menu);
-			viewContent(menu, post_data);
+			viewContent(menu);
 		})
 
-		function viewContent(menu="", post_data={param: 10}){
+		function viewContent(menu=""){
 			$.ajax({
 				method: "POST",
 				url: "<?= base_url(); ?>Admin/"+menu,
-				data: post_data
+				data: {}
 			}).done(function(res){
 				//console.log(res);
 				$("#content").html(res);
